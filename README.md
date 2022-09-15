@@ -11,8 +11,8 @@ Para el corecto funcionamiento del programa, es necesario tener instalado un ges
 * CSS
 * JAVASCRIPT
 
-## Documentacion
-[Documentacion con los pantallazos y procesos detallados](https://github.com/RayanSt/PruebaGemaSAS/blob/main/documents/Documentacion.pdf)
+## Documentación
+[Documentación con los pantallazos y procesos detallados](https://github.com/RayanSt/PruebaGemaSAS/blob/main/documents/Documentacion.pdf)
 
 <!-- CONTACT -->
 ## Contacto

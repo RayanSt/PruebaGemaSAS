@@ -8,7 +8,6 @@ while(!feof($myfile)){
     $lineas = fgets($myfile);
     $arreglo = explode(",",$lineas);
     //validar que el formato corresponda
-    var_dump($arreglo);
     if(is_null($arreglo[0]) || is_null($arreglo[3]) || ($arreglo[3] < 0 || $arreglo[3] > 3) || is_null($arreglo[4])){
         $est = false;
     }

@@ -9,26 +9,27 @@ function insertar($usuario){
         $nombres=$usuario[$i][1];
         $apellidos=$usuario[$i][2];
         $Codigo=$usuario[$i][3];
-        $sql="INSERT INTO tm_usuarios VALUES('$email','$nombres','$apellidos','$Codigo')";
+        $Revisor=$usuario[$i][4];
+        $sql="INSERT INTO tm_usuarios VALUES('$email','$nombres','$apellidos','$Codigo','$Revisor')";
         $query= mysqli_query($con,$sql);
     }     
 }
 
 function get_usurios_activos(){
     $con=conectar();
-    $sql="SELECT Email,Nombre,Apellido FROM tm_usuarios WHERE Codigo = 1";
+    $sql="SELECT u.Email AS email,u.Nombre AS nombre,u.Apellido AS apellido,r.apellido AS revisor FROM tm_usuarios u JOIN revisores r ON u.Revisor=r.id AND u.Codigo = 1";
     return $query = mysqli_query($con,$sql);
 }
 
 function get_usurios_inactivos(){
     $con=conectar();
-    $sql="SELECT Email,Nombre,Apellido,Codigo FROM tm_usuarios WHERE Codigo = 2";
+    $sql="SELECT u.Email AS email,u.Nombre AS nombre,u.Apellido AS apellido,r.apellido AS revisor FROM tm_usuarios u JOIN revisores r ON u.Revisor=r.id AND u.Codigo = 2";
     return $query = mysqli_query($con,$sql);
 }
 
 function get_usurios_espera(){
     $con=conectar();
-    $sql="SELECT Email,Nombre,Apellido FROM tm_usuarios WHERE Codigo = 3";
+    $sql="SELECT u.Email AS email,u.Nombre AS nombre,u.Apellido AS apellido,r.apellido AS revisor FROM tm_usuarios u JOIN revisores r ON u.Revisor=r.id AND u.Codigo = 3";
     return $query = mysqli_query($con,$sql);
 }
 ?>

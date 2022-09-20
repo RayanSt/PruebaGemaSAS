@@ -23,6 +23,7 @@ include("../models/Users.php");
                         <th>Email</th>
                         <th>Nombre</th>
                         <th>Apellido</th>
+                        <th>Revisor</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -31,9 +32,10 @@ include("../models/Users.php");
                         while($row=mysqli_fetch_array($array_list)){
                     ?>
                     <tr>
-                        <th><?php echo $row['Email']?></th>
-                        <th><?php echo $row['Nombre']?></th>
-                        <th><?php echo $row['Apellido']?></th>                                    
+                        <th><?php echo $row['email']?></th>
+                        <th><?php echo $row['nombre']?></th>
+                        <th><?php echo $row['apellido']?></th>
+                        <th><?php echo $row['revisor']?></th>                                      
                     </tr>
                     <?php 
                         }
@@ -47,6 +49,7 @@ include("../models/Users.php");
                         <th>Email</th>
                         <th>Nombre</th>
                         <th>Apellido</th>
+                        <th>Revisor</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -55,9 +58,10 @@ include("../models/Users.php");
                         while($row=mysqli_fetch_array($array_list)){
                     ?>
                     <tr>
-                        <th><?php  echo $row['Email']?></th>
-                        <th><?php  echo $row['Nombre']?></th>
-                        <th><?php  echo $row['Apellido']?></th>                                    
+                        <th><?php echo $row['email']?></th>
+                        <th><?php echo $row['nombre']?></th>
+                        <th><?php echo $row['apellido']?></th>
+                        <th><?php echo $row['revisor']?></th>                                    
                     </tr>
                     <?php 
                     }
@@ -71,6 +75,7 @@ include("../models/Users.php");
                         <th>Email</th>
                         <th>Nombre</th>
                         <th>Apellido</th>
+                        <th>Revisor</th>
                     </tr>
                     </thead>
 
@@ -80,9 +85,10 @@ include("../models/Users.php");
                         while($row=mysqli_fetch_array($array_list)){
                     ?>
                     <tr>
-                        <th><?php echo $row['Email']?></th>
-                        <th><?php echo $row['Nombre']?></th>
-                        <th><?php echo $row['Apellido']?></th>                                      
+                        <th><?php echo $row['email']?></th>
+                        <th><?php echo $row['nombre']?></th>
+                        <th><?php echo $row['apellido']?></th>
+                        <th><?php echo $row['revisor']?></th>                                      
                     </tr>
                     <?php 
                     }
